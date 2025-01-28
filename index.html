@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <h1>Social media shared today, tomorrow or by location</h1>
+              <div class="slider-container">
+              <div class="slider">
+                  <img src="./images/image1.png" class="slide active">
+                  <img src="./images/image2.png" class="slide">
+                  <img src="./images/image3.png" class="slide">
+              </div>
+      
+              <!-- Dots for navigation -->
+              <div class="dots">
+                  <span class="dot active" onclick="goToSlide(0)"></span>
+                  <span class="dot" onclick="goToSlide(1)"></span>
+                  <span class="dot" onclick="goToSlide(2)"></span>
+              </div>
+          </div>
+      
+        </div>
+
+        <!-- Form Section -->
+        <div class="right-container">
+            <div class="form-logo">
+                <img src="images/logo.png" alt="Capcut Logo">
+                <h3>Capcut</h3>
+            </div>
+            <div class="form-header">
+                <h1>Create account</h1>
+                <p>For business, brand, or celebrity.</p>
+            </div>
+
+            <!-- Corrected Form Start -->
+            <form action="" class="form-container" id="myForm">
+                <div class="form-name">
+                    <div>
+                        <label for="name">First Name</label>
+                        <input type="text" id="name">
+                        <small class="error" id="nameError"></small>
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName">
+                        <small class="error" id="lastNameError"></small>
+                    </div>
+                </div>
+
+                <div class="form-name">
+                    <div>
+                        <label for="email">Email or Phone Number</label>
+                        <input type="text" id="email">
+                        <small class="error" id="emailError"></small>
+                    </div>
+                    <div>
+                        <label for="dob">Date of Birth (MM/DD/YY)</label>
+                        <input type="date" id="dob">
+                    </div>
+                </div>
+
+                <div class="form-name">
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password">
+                        <small class="error" id="passwordError"></small>
+                    </div>
+                    <div>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword">
+                        <small class="error" id="confirmPasswordError"></small>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <div class="checkbox-container1">
+                        <label class="checkbox1">
+                            <input type="checkbox" id="rememberMe">
+                            Remember me
+                        </label>
+                        <a href="#"> forget password?</a>
+                    </div>
+                    <div class="checkbox-container2">
+                        <label class="checkbox1">
+                            <input type="checkbox" id="terms" required>
+                            I agree to all the <a href="#">Terms</a> and <a href="#">Privacy policy</a>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <button type="submit" class="create-btn">Create account</button>
+                    <button type="button" class="google-btn">
+                        <img src="images/google.png" alt="Google Logo">
+                        <p>Sign in with Google</p>
+                    </button>
+                </div>
+
+                <p class="login-text">Already have an account? <a href="#">Login</a></p>
+            </form>
+            <!-- Corrected Form End -->
+
+            <div class="googleplay">
+                <img src="images/googleplay.png" alt="Google Play">
+                <img src="images/app.png" alt="App Store">
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
