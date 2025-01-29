@@ -4,7 +4,7 @@ window.onload = function () {
 
       let isValid = true;
 
-      // First Name validation
+      //***********First Name validation**********///
       let name = document.getElementById("name").value.trim();
       let nameError = document.getElementById("nameError");
       if (name.length < 3) {
@@ -14,7 +14,7 @@ window.onload = function () {
           nameError.textContent = "";
       }
 
-      // Last Name validation
+      //*******Last Name validation*********///
       let lastName = document.getElementById("lastName").value.trim();
       let lastNameError = document.getElementById("lastNameError");
       if (lastName.length < 3) {
@@ -24,7 +24,7 @@ window.onload = function () {
           lastNameError.textContent = "";
       }
 
-      // Email validation
+      //*************Email validation************///
       let email = document.getElementById("email").value.trim();
       let emailError = document.getElementById("emailError");
       let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -35,7 +35,7 @@ window.onload = function () {
           emailError.textContent = "";
       }
 
-      // Password validation
+      //**********Password validation**************////
       let password = document.getElementById("password").value;
       let passwordError = document.getElementById("passwordError");
       if (password.length < 6) {
@@ -45,7 +45,7 @@ window.onload = function () {
           passwordError.textContent = "";
       }
 
-      // Confirm Password validation
+      //************Confirm Password validation************////
       let confirmPassword = document.getElementById("confirmPassword").value;
       let confirmPasswordError = document.getElementById("confirmPasswordError");
       if (confirmPassword !== password) {
@@ -55,10 +55,9 @@ window.onload = function () {
           confirmPasswordError.textContent = "";
       }
 
-      // Check if the form is valid before submitting
       if (isValid) {
           alert("Form submitted successfully!");
-          document.getElementById("myForm").reset(); // Reset form after submission
+          document.getElementById("myForm").reset(); 
       }
   });
 };
@@ -79,7 +78,7 @@ function updateSlides() {
         else if (i === next) slide.classList.add("right");
     });
 
-    // Update active dot
+t
     dots.forEach((dot, i) => {
         dot.classList.toggle("active", i === index);
     });
@@ -95,8 +94,7 @@ function goToSlide(n) {
     updateSlides();
 }
 
-// Auto Slide every 3 seconds
+
 setInterval(nextSlide, 3000);
 
-// Initialize
 updateSlides();
