@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +6,18 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Main container */
+html, body{
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/******* Left-container *****/
+/************Left-container***********/
 .left-container {
   flex: 2;
   display: flex;
@@ -26,6 +29,7 @@
   height: 100vh;
   padding-top: 10px;
   justify-content: center;
+  max-width: 100%;
  
 }
 
@@ -67,14 +71,12 @@
   z-index: 1;
 }
 
-/* Middle Image - Zoom & Focus */
 .slide.active {
   transform: scale(1.2) translateY(-20px);
   opacity: 1;
   z-index: 3;
 }
 
-/* Left & Right Images */
 .slide.left {
   transform: translateX(-150px) scale(1);
   z-index: 2;
@@ -305,21 +307,52 @@ a{
 /* Small Mobile Devices */
 @media (max-width: 480px) {
   .left-container h1 {
-    font-size: 24px;
-    width: 80%;
+    font-size: 20px;
+    max-width: 100%;
+    margin: 0;
 
   }
 
-  .slider img{
-width: 20%;
-  }
+/* Slider Container */
+.slider-container {
+  width: 90%;
+  height: 250px;
+}
 
+
+.slide {
+  width: 90%;
+  height: 70%;
+}
+
+.slide.active {
+  transform: scale(1.1) translateY(-10px);
+}
+
+.slide.left {
+  transform: translateX(-80px) scale(1);
+}
+
+.slide.right {
+  transform: translateX(80px) scale(1);
+  
+}
+
+/* Dots Navigation */
+.dots {
+  bottom: 5px;
+}
+
+.dot {
+width: 10px;
+height: 10px;
+}
   .right-container {
     padding: 15px;
     display: flex;
     flex-direction: column;
+    max-width: 100%;
   }
-
   .form-name {
     display: flex;
     flex-direction: column;
